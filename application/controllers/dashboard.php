@@ -16,7 +16,7 @@
 			
 		}
 
-		public function index() {
+		public function index($errors="") {
 			
 			$headerData['pageTitle'] = "Photo App - Dashboard";
 			
@@ -25,7 +25,7 @@
 			
 			$dashboardData['userEmail'] = $userInfo['email'];
 			$dashboardData['photos'] = $this->photo_model->get_photos($userInfo['user_id']);
-			$dashboardData['error'] = "";
+			$dashboardData['error'] = $errors;
 			
 			$this->load->view("include/header", $headerData);
 			$this->load->view("dashboard_view", $dashboardData);
@@ -33,9 +33,10 @@
 			
 		}
 		
+		
 		public function upload() {
 			
-			$headerData['pageTitle'] = "Photo App - Dashboard";
+
 			$userInfo = $this->user_model->get_user_info();
 			
 			$config['upload_path'] = "./uploads/";
@@ -43,25 +44,18 @@
 			
 			$this->load->library("upload", $config);
 			
-			if($this->input->post("submit") && $this->upload->do_upload("image")) {
+			if($this->upload->do_upload("image")) {
 				$photoInfo = $this->upload->data();
 				$this->photo_model->add_photo($userInfo['user_id'], "uploads/".$photoInfo['file_name']);
 				redirect("dashboard");
 			}
 			else {
-
-				$dashboardData['userEmail'] = $userInfo['email'];
-				
-				$dashboardData['photos'] = $this->photo_model->get_photos($userInfo['user_id']);
-				$dashboardData['error'] = $this->upload->display_errors("<li>", "</li>");
-				
-				$this->load->view("include/header", $headerData);
-				$this->load->view("dashboard_view", $dashboardData);
-				$this->load->view("include/footer");
-				
+				$this->index($this->upload->display_errors("<li>", "</li>"));				
 			}
 			
 		}
+		
+		
 		
 	}
 
