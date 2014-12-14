@@ -1,7 +1,12 @@
-h2 {
+h2,h3,h4 {
 	font-weight: bold;
 	margin: 0px;
 	margin-bottom: 10px;
+}
+
+hr {
+	border-color: rgba(0,0,0,.25);
+	border-style: dashed;
 }
 
 .loginDiv {
@@ -22,13 +27,13 @@ h2 {
 	padding-top: 15px;
 }
 
-.loginDiv .bg-danger {
+.bg-danger {
 	padding: 5px 10px;
 	margin-bottom: 20px;
 	border: dashed rgba(255,0,0,.55) 1px;
 }
 
-.loginDiv .bg-danger ul {
+.bg-danger ul {
 	padding: 0px;
 	margin-top: 10px;
 	padding-left: 20px;
@@ -43,4 +48,50 @@ h2 {
 	width: 25%;
 	border: solid rgba(0,255,0,.5) 1px;
 	padding: 30px;
+}
+
+.dashboardDiv {
+	position: relative;
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	border: solid rgba(0,144,255,.5) 1px;
+	padding: 30px;
+	min-height: 400px;
+		
+}
+
+.dashboardDiv h2 .small {
+	padding-top: 8px;	
+}
+
+.grayBox {
+	border: solid rgba(0,0,0,.25) 1px;
+	padding: 10px;	
+}
+
+.grayBG {
+	padding: 10px;
+	background-color: rgba(0,0,0,.10);	
+}
+
+.photosDiv {
+	position: relative;
+	border: solid rgba(0,0,0,.25) 1px;
+	padding: 10px;
+	text-align: center;	
+}
+
+.photo {
+	display: inline-block;
+	margin: 10px;
+	width: 100px;
+	height: 150px;
+	border: solid rgba(0,0,0,.4) 1px;	
+}
+
+.photo img {
+	width: 100px;
+	height: 150px;	
 }

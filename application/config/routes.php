@@ -38,6 +38,7 @@
 |
 */
 
+$route['dashboard/upload'] = "dashboard/upload";
 $route['dashboard'] = "dashboard";
 $route['register'] = "register";
 $route['verify-login'] = "login";
