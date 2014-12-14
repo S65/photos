@@ -1,0 +1,46 @@
+h2 {
+	font-weight: bold;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.loginDiv {
+	
+	position: relative;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+	border: solid rgba(0,144,255,.5) 1px;
+	padding: 30px;
+	min-height: 300px;
+	
+}
+
+.loginDiv p {
+	margin: 0px;
+	padding-top: 15px;
+}
+
+.loginDiv .bg-danger {
+	padding: 5px 10px;
+	margin-bottom: 20px;
+	border: dashed rgba(255,0,0,.55) 1px;
+}
+
+.loginDiv .bg-danger ul {
+	padding: 0px;
+	margin-top: 10px;
+	padding-left: 20px;
+	font-size: 12px;
+}
+
+.registerComplete {
+	position: relative;
+	margin-top: 15%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+	border: solid rgba(0,255,0,.5) 1px;
+	padding: 30px;
+}
